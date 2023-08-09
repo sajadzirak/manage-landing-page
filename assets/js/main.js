@@ -1,4 +1,4 @@
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
 
 const navToggle = document.getElementById('nav-toggle')
 const navClose = document.getElementById('nav-close')
@@ -36,17 +36,25 @@ window.addEventListener('scroll', () => {
     }
 })
 
-// const swiper = new Swiper('.swiper', {
-//     direction: 'vertical',
-//     loop: true,
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//     scrollbar: {
-//         el: '.swiper-scrollbar',
-//     },
-// })
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    grabCursor: 'true',
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoHeight: true,
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        1150 : {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    }  
+})
