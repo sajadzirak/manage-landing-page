@@ -82,6 +82,10 @@ p {
     width: 120px;
 }
 
+.nav__toggle {
+    display: none;
+}
+
 .nav__toggle,
 .nav__close {
     position: absolute;
@@ -129,6 +133,9 @@ p {
         background: linear-gradient(to bottom, transparent, 
                                     hsla(227, 12%, 61%, 0.895), 
                                     hsla(233, 12%, 13%, 0.674));
+    }
+    .show-toggle {
+        display: block;
     }
 }
 
@@ -301,13 +308,13 @@ p {
     top: 3rem;
 }
 
-.simplify__container button {
+.simplify__button button {
     background-color: var(--body-color);
     color: var(--Bright-Red);
     cursor: pointer;
 }
 
-.simplify__container button:hover {
+.simplify__button button:hover {
     color: hsla(12, 88%, 59%, 0.487);
     opacity: 1;
 }

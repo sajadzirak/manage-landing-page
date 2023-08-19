@@ -9,19 +9,19 @@ const navLinks = document.querySelectorAll('.nav__link')
 if(navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
-        navToggle.style.display = 'none'
+        navToggle.classList.remove('show-toggle')
     })
 }
 if(navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
-        navToggle.style.display = 'block'
+        navToggle.classList.add('show-toggle')
     })
 }
 navLinks.forEach((element) => {
     element.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
-        navToggle.style.display = 'block'
+        navToggle.classList.add('show-toggle')
     })
 })
 
